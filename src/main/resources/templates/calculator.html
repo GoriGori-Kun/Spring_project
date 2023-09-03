@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8" />
+	<title>計算機</title>
+</head>
+
+<body>
+	<h1>計算機</h1>
+	<form method="post" action="fourArithmeticOperations">
+		<input type="number" name="number1" required>
+		<select name="operator">
+			<option value="+">&plus;</option>
+			<option value="-">&minus;</option>
+			<option value="*">&times;</option>
+			<option value="/">&divide;</option>
+		</select>
+		<input type="number" name="number2" required>
+		<button type="submit">&equals;</button>
+	</form>
+	<br>
+	<p th:text="${result}"></p>
+</body>
+
+</html>
+
+<!--valueの記述　数学的な演算子の場合、一般的な値（+、-、*、/）を使用が一般的-->
+<!--htmlファイルが違っても元が同じ場合、action名が同じだとPostMappingが重複して認識するからエラーが出る-->
