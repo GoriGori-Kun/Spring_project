@@ -11,18 +11,16 @@
 <body>
 	<h1>動物詳細画面</h1>
 	<!--${oooo.xxx} = Thymeleafの式 ooooオブジェクトのxxx-->
-	<div class="animals">
-		<div th:each="animal : ${hitAnimalsList}" >
-		    <p th:text="'No: ' + ${animal.id}"></p>
-		    <p th:text="'英名: ' + ${animal.name}"></p>
-		    <p th:text="'和名: ' + ${animal.japaneseName}"></p>
-		    <p th:text="'鳴き声: ' + ${animal.cry}"></p>
-		</div>
+	<div class="animals" th:each="animal : ${hitAnimalsList}">
+		<p th:text="'No: ' + ${animal.id}"></p>
+		<p th:text="'英名: ' + ${animal.name}"></p>
+		<p th:text="'和名: ' + ${animal.japaneseName}"></p>
+		<p th:text="'鳴き声: ' + ${animal.cry}"></p>
 	</div>
 	<form action=animalsSearch method="get">
 		<button type="submit">トップへ</button>
 	</form>
-	
+
 	<style>
 		.animals {
 			list-style: none;
