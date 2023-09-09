@@ -21,12 +21,13 @@ public class AnimalsAPIService {
 	public List<AnimalsAPIData> getAnimalsAPIData() throws IOException {
 
 		AnimalsAPIData[] animalsList = animalsAPIRepository.getAnimalsAPIData();
+
 		return Arrays.asList(animalsList); // asListメソッドは配列をリストに変換する
 	}
 
-	public List<AnimalsAPIData> getSpecificAnimalsAPIData(String animals) throws IOException {
+	public List<AnimalsAPIData> getSpecificAnimalsAPIData(String animalsId) throws IOException {
 
-		AnimalsAPIData[] hitAnimalsList = animalsAPIRepository.getSpecificAnimalsAPIData(animals);
+		AnimalsAPIData[] hitAnimalsList = animalsAPIRepository.getSpecificAnimalsAPIData(animalsId);
 
 		return Arrays.asList(hitAnimalsList);
 	}

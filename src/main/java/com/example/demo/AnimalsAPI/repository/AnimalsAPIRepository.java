@@ -58,9 +58,9 @@ public class AnimalsAPIRepository {
 		return animalsList;
 	}
 
-	public AnimalsAPIData[] getSpecificAnimalsAPIData(String animals) throws IOException { // 特定の動物の情報を取得するため
+	public AnimalsAPIData[] getSpecificAnimalsAPIData(String animalsId) throws IOException { // 特定の動物の情報を取得するため
 
-		String url = "https://jsn9xu2vsk.execute-api.ap-northeast-1.amazonaws.com/sample/sampleapi?id=" + animals;
+		String url = "https://jsn9xu2vsk.execute-api.ap-northeast-1.amazonaws.com/sample/sampleapi?id=" + animalsId;
 
 		RestTemplate rest = new RestTemplate();
 
